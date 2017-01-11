@@ -1,0 +1,11 @@
+def story():
+    template = "This summer I went on a trip to %(place). My friend %(name) went with me. The drive there was %(adjective). While we were there we %(past tense verb) a lot. When we got there we a ate a lot of %(food)."
+    
+    dictionary = {}
+    dictionary["place"] = raw_input("Enter a place: ")
+    dictionary["name"] = raw_input("Enter a name: ")
+    dictionary["adj"] = raw_input("Enter an adjective: ")
+    dictionary["past tense verb"] = raw_input("Enter a past-tense verb: ")
+    dictionary["food"] = raw_input("Enter an food: ")
+    
+    print template % dictionary
