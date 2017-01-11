@@ -7,5 +7,23 @@ def story():
     dictionary["adj"] = raw_input("Enter an adjective: ")
     dictionary["past tense verb"] = raw_input("Enter a past-tense verb: ")
     dictionary["food"] = raw_input("Enter an food: ")
-    
     print template % dictionary
+def story2():
+    template = Today, my friend %(name) and I went to %(place) because we thought it would be %(adj). While we were there we saw a %(noun) and a %(noun2). We had to leave when an army of %(adj2) %(animal)s started chasing us out the door. 
+    
+    dictionary = {}
+    dictionary["name"] = raw_input("Enter a name: ")
+    dictionary["place"] = raw_input("Enter a place: ")
+    dictionary["adj"] = raw_input("Enter an adjective: ")
+    dictionary["noun"] = raw_input("Enter a noun: ")
+    dictionary["noun2"] = raw_input("Enter another noun: ")
+    dictionary["adj2"] = raw_input("Enter an adjective: ")
+    dictionary["animal"] = raw_input("Enter an animal: ")
+    print template % dictionary
+    
+from random import choice
+stories = [story, story2]
+story_to_run = choice(stories)
+story_to_run()
+    
+ 
